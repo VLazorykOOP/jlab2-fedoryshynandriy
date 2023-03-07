@@ -52,8 +52,36 @@ public class Line {
     }
 
     public String toString() {
-        String s;
-        s= a+ "x +" +b+ "y +" +c+ " = 0;";
+        String s=" ";
+        if(a%1==0 && b%1==0 && c%1==0){
+            if(b>=0 && c>=0) {
+                s = (int) a + "x +" + (int) b + "y +" + (int) c + " = 0;";
+            }
+            else if (b<0 && c<0){
+                s = (int) a + "x " + (int) b + "y " + (int) c + " = 0;";
+            }
+            else if (b<0 && c>0){
+                s = (int) a + "x " + (int) b + "y +" + (int) c + " = 0;";
+            }
+            else if (b>0 && c<0){
+                s = (int) a + "x +" + (int) b + "y " + (int) c + " = 0;";
+            }
+
+        }
+        else{
+            if(b>=0 && c>=0) {
+                s =  a + "x +" +  b + "y +" +  c + " = 0;";
+            }
+            else if (b<0 && c<0){
+                s =  a + "x " + b + "y " +  c + " = 0;";
+            }
+            else if (b<0 && c>0){
+                s =  a + "x " +  b + "y +" +  c + " = 0;";
+            }
+            else if (b>0 && c<0){
+                s =  a + "x +" +  b + "y " +  c + " = 0;";
+            }
+        }
         return s;
     }
 }

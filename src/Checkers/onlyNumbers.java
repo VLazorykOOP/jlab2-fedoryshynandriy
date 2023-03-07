@@ -18,7 +18,7 @@ public class onlyNumbers {
             System.out.println("Enter a double");
             input.next();
         }
-        int a = input.nextInt();
+        double a = input.nextDouble();
         return a;
     }
 }
